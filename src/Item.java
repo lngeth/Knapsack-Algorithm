@@ -1,8 +1,8 @@
 public class Item {
-    private String nom;
-    private float poids;
-    private float prix;
-    private float prixSurPoids;
+    private final String nom;
+    private final float poids;
+    private final float prix;
+    private final float prixSurPoids;
 
     public Item(String nom, float poids, float prix) {
         this.nom = nom;
@@ -11,36 +11,16 @@ public class Item {
         this.prixSurPoids = this.prix/this.poids;
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
     public float getPoids() {
         return poids;
-    }
-
-    public void setPoids(float poids) {
-        this.poids = poids;
     }
 
     public float getPrix() {
         return prix;
     }
 
-    public void setPrix(float prix) {
-        this.prix = prix;
-    }
-
     public float getPrixSurPoids() {
         return prixSurPoids;
-    }
-
-    public void setPrixSurPoids(float prixSurPoids) {
-        this.prixSurPoids = prixSurPoids;
     }
 
     @Override

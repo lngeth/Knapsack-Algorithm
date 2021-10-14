@@ -7,7 +7,7 @@ public class Resoudre_sac_a_dos {
                     sacADos.resolutionGloutonne();
                     break;
                 case "dynamique":
-                    sacADos.resolutionDynamique();
+                    sacADos.resolutionDynamique2();
                     break;
                 case "pse":
                     sacADos.resolutionPSE();

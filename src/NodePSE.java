@@ -5,7 +5,6 @@ public class NodePSE {
     private static ArrayList<Item> listItemPossible;
     private static float maxWeightCapacity;
     private static ArrayList<Item> bestSolution;
-    private SacADos sacADos;
     private ArrayList<Item> listItemInside;
     private NodePSE leftSon;
     private NodePSE righSon;

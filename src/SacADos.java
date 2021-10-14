@@ -7,7 +7,7 @@ public class SacADos {
     private Scanner scanner;
     private ArrayList<Item> listItemPossible;
     private ArrayList<Item> listItemDansSac;
-    private File file;
+    private final File file;
     private float poids_maximal;
 
     public SacADos(String chemin, float poids_maximal) {
@@ -16,6 +16,26 @@ public class SacADos {
         this.listItemPossible = new ArrayList<>();
         this.listItemDansSac = new ArrayList<>();
         chargerItems();
+    }
+
+    public ArrayList<Item> getListObjetPossible() {
+        return listItemPossible;
+    }
+
+    public float getValeurSac() {
+        float prixActuelSac = 0;
+        for (Item item : this.listItemDansSac) {
+            prixActuelSac += item.getPrix();
+        }
+        return prixActuelSac;
+    }
+
+    public float getPoidsSac() {
+        float poidsActuelSac = 0;
+        for (Item item : this.listItemDansSac) {
+            poidsActuelSac += item.getPoids();
+        }
+        return poidsActuelSac;
     }
 
     public void chargerItems() {
@@ -165,48 +185,11 @@ public class SacADos {
         this.listItemPossible.removeAll(nodePSE.returnBestSolution());
     }
 
-    public float getValeurSac() {
-        float prixActuelSac = 0;
-        for (Item item : this.listItemDansSac) {
-            prixActuelSac += item.getPrix();
-        }
-        return prixActuelSac;
-    }
-
-    public float getPoidsSac() {
-        float poidsActuelSac = 0;
-        for (Item item : this.listItemDansSac) {
-            poidsActuelSac += item.getPoids();
-        }
-        return poidsActuelSac;
-    }
-
-    public float getPoids_maximal() {
-        return poids_maximal;
-    }
-
-    public ArrayList<Item> getListObjetPossible() {
-        return listItemPossible;
-    }
-
     @Override
     public String toString() {
         return "SacADos{ \n" + listItemDansSac +
                 ", poidsDuSac =" + this.getPoidsSac() +
                 ", valeur= " + this.getValeurSac() +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        SacADos sac = new SacADos("src/Items1.txt", 15);
-        /*System.out.println(sac);
-        sac.resolutionGloutonne();
-        System.out.println(sac);
-        System.out.println("poids actuel du sac " + sac.retournePoidsActuelSac());
-        System.out.println("prix actuel du sac " + sac.retournePrixActuelSac());*/
-
-        //sac.resolutionDynamique();
-        sac.resolutionPSE();
-        System.out.println(sac);
     }
 }
