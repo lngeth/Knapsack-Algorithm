@@ -1,5 +1,4 @@
 # Knapsack Algorithm
-***
 ## Description
 
 A school assignment about algorithmic resolution of the famous Knapsack problem.  
