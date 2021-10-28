@@ -1,0 +1,8 @@
+Objet A;2;5
+Objet B;3;8
+Objet C;5;14
+Objet D;2;6
+Objet E;4;13
+Objet F;6;17
+Objet G;3;10
+Objet H;1;4
