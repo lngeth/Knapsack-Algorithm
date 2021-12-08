@@ -9,5 +9,5 @@ Based on 3 methods :
 
 ## Authors
 
-**Laurent Ngeth** : *@lngeth*  
+**Laurent Ngeth** : [*@lngeth*](https://github.com/lngeth)
 **Yacine Bettayeb** : *@*
